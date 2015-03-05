@@ -1,0 +1,186 @@
+/* Style for footer ==============================
+===================================================*/
+
+footer {
+	position: relative;
+	bottom: 0;
+	width: 100%;
+}
+.footBlue {
+	width: 100%;
+	min-height: 40px;
+	padding-top: 10px;
+	background: url(../images/footer-arrow-down.png) top center no-repeat $colorBlue;
+}
+.footGrey {
+	padding: 20px 10px;
+	width: 100%;
+	@extend %bgColorGreyDark;
+	@extend %fontColor5;
+	.footItemHeading {
+		padding: 5px 0;
+		margin-bottom: 10px;
+		border-bottom: 1px solid $colorHeadingBorder;
+		@extend %fontColor6;
+		@extend %fontStrong;
+	}
+	.footMenu {
+		li {
+			display: block;
+			a {
+				padding: 10px 0;
+				@extend %fontColor5;
+				@extend %textDecorNone;
+				@extend %transitionAll;
+				&:hover {
+					@extend %fontColorBlue;
+				}
+			}
+		}
+	}
+	p {
+		margin-bottom: 15px;
+	}
+	label {
+		@extend %fontStrong;
+		margin-right: 5px;
+	}
+	.address {
+		margin-bottom: 15px;
+		span {
+			display: block;
+			font-size: 14px;
+			line-height: 18px;
+			&.city {
+				@extend %fontStrong;
+			}
+		}
+	}
+	.note {
+		position: relative;
+		padding-left: 10px;
+		.star {
+			position: absolute;
+			font-size: 14px;
+			top: 8px;
+			left: 0;
+		}
+		margin-top: 15px;
+	}
+	.contacts {
+		.contactItem {
+			a {
+				@extend %fontColor5;
+				@extend %textDecorNone;
+				@extend %transitionAll;
+				&.email {
+					@extend %fontColorBlue;
+				}
+				&.phoneNumber {
+					&:hover {
+						@extend %fontColorBlue;
+					}
+				}
+			}
+		}
+	}
+	.form-control {
+		&.email {
+			@extend %bgColorLightGrey;
+			@extend %fontColor5;
+			border: none;
+			margin-bottom: 10px;
+			padding: 0 10px;
+		}
+	}
+	.submitButton {
+		@extend %bgColorBlue;
+		@extend %transitionAll;
+		border: none;
+		outline: none;
+		@include linear-gradient(rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.1), 1);
+		&:hover {
+			@include linear-gradient($colorHeadingBorder, $bgColorGreyDark, 1);
+		}
+	}
+}
+
+.copyrightSocials {
+	@extend %bgColorLightBlack;
+	@extend %fontColor7;
+    @include box-shadow(0, 4px, 4px, rgba(0, 0, 0, 0.2), 1);
+    border-top: 1px solid #colorBlack;
+    padding: 20px 0;
+	width: 100%;
+	min-height: 40px;
+	.copyright {
+		padding-top: 6px;
+	}
+	.socials {
+		a {
+			font-size: 20px;
+			padding: 8px 10px;
+			display: inline-block;
+			@include border-radius(3px);
+			@extend %fontColor7;
+			@extend %textDecorNone;
+			@extend %transitionAll;
+			&.twitter, &.xing {
+				margin-right: 5px;
+			}
+			&:hover {
+				@extend %bgColorGreyToTop;
+				@extend %fontColorBlue;
+			}
+		}
+	}
+}
+
+
+#testScroll  {
+	display: none;
+	@extend %fontColor1;
+    @extend %bgColorGreyToTop;
+	@include border-radius(5px);
+	@extend %transitionAll;
+	font-size: 20px;
+	padding: 10px;
+	border: none;
+	height: 40px;
+    position: fixed;
+    right: 20px;
+    top: 85%;
+    z-index: 999999999;
+    &:hover {
+		@extend %bgColor2;
+    }
+}
+
+@media (max-width: 767px) {
+	.footGrey {
+		padding: 20px 0;
+	}
+	.contactForm {
+		width: 60%;
+	}
+}
+
+@media (max-width: 479px) {
+	.copyrightSocials {
+		padding: 15px 10px;
+		.copyright, .socials {
+			float: none !important;
+			width: 100%;
+			text-align: center;
+		}
+		.copyright {
+			padding-top: 0;
+			margin-bottom: 15px;
+		}
+	}
+	.contactForm {
+		width: 100%;
+	}
+}
+
+

@@ -1,0 +1,35 @@
+/* Style for content ==============================
+===================================================*/
+
+.content {
+	margin-top: 0px;
+	img {
+		width: 100%;
+		height: auto;
+	}
+	h1 {
+		font-size: 20px;
+		@extend %fontColor4;
+	}
+	.row {
+		padding: 0px 20px;               
+	}
+        .bgBlue {
+                @extend  %bgColorBlue;
+        }         
+        .bgGrey {
+                @extend  %bgColorGrey;
+        }        
+        .bgWhite {
+                @extend  %bgColorWhite;
+        }        
+}
+
+.contentSpacerTopbar {
+        height: 74px;    
+}
+
+.contentSpacerSubnav {
+        height: 60px;    
+}
+

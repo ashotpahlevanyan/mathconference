@@ -1,0 +1,16 @@
+/* Body style for site =====================
+============================================*/
+
+
+@import "1header/header";
+@import "2content/content";
+@import "3footer/footer";
+@import "4slider/slider";
+@import "5pages/common";
+@import "5pages/cloud";
+@import "5pages/connect";
+@import "5pages/drive";
+
+/* styles for Responsive */
+
+//@import "mediaqueries/responsive"; // responsive will be given in each file

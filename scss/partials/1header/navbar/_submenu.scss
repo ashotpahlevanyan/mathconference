@@ -1,0 +1,127 @@
+/*Style for submenu navigation =============================
+============================================================*/
+
+.submenuWrapper {
+	display: block;
+	@extend %bgColor1; 
+	//@include box-shadow(0,0,10px, rgba(0,0,0,0.2), 1);
+	position: fixed;
+	z-index: 99998;
+	width: 100%;
+	border-bottom: 1px solid $colorBorderSubNav;
+	top: 73px;
+	.submenu {
+		display: table;
+		@extend %listStyleNone;
+		width: 100%;
+		border: none;
+		font-size: 0;
+		text-align: center;
+		&.six {
+			li {
+				width: 16.66%;
+			}
+		} 
+		&.five {
+			li {
+				width: 20%;
+			}
+		}
+		&.four {
+			li {
+				width: 25%;
+			}
+		}
+		&.three {
+			li {
+				width: 33.33%;
+			}
+		}
+		&:first-child {
+			border-left: 1px solid $colorBorderSubNav;
+		}
+		li {
+			display: table-cell;
+			vertical-align: top;
+			border-right: 1px solid $colorBorderSubNav;
+			width: 16.66%;
+			height: auto;
+			border-bottom: 2px solid transparent;
+			&.selected, &.active {
+				border-bottom: 2px solid $colorTopBar;
+				a {
+					@extend %fontColor3;
+				}
+			}
+			&:hover {
+				border-bottom: 2px solid $colorTopBar;
+			}
+			a {
+				display: block;
+				height: 100%;
+				width: 100%;
+				@extend %bgColor1;
+				@extend %textTransformUpper;
+				@extend %fontColor2;
+				@extend %fontOpenSans;
+				font-size: 12px;
+				@extend %fontStrong;
+				@extend %textDecorNone;
+				padding: 20px 0px;
+    			text-align: center;
+    			outline: none;
+				&:active {
+					@extend %fontStrong;
+					@extend %bgColorTransparent;
+				}
+			}
+		}
+	}
+}
+
+.subnaviScrollspy {
+	//background-color: $colorBlue;
+	//color: $colorWhite;
+}
+@media (max-width: 767px) {
+	.submenuWrapper {
+		position: static;
+		top: 0;
+		.container {
+			padding-left: 0;
+			padding-right: 0;
+		}
+		.submenu {
+			display: block;
+			&:first-child {
+				border-left: none;
+				border-top: 1px solid $colorBorderSubNav; 
+			}
+			li {
+				display: block;
+				width: 100%;
+				border-left: none;
+				border-right: none;
+				border-bottom: 2px solid $colorBorderSubNav;
+				a {
+					padding: 10px 15px;
+					text-align: left;
+				}
+			}
+			&.six {
+				li {
+					width: 100%;
+				}
+			} 
+			&.five {
+				li {
+					width: 100%;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 479px) {
+
+}

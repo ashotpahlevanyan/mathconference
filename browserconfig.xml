@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<browserconfig>
+	<msapplication>
+		<tile>
+			<square70x70logo src="small.png"/>
+			<square150x150logo src="medium.png"/>
+			<wide310x150logo src="wide.png"/>
+			<square310x310logo src="large.png"/>
+			<square70x70logo src="images/icon57.png"/>
+			<square72x72logo src="images/icon72.png"/>
+			<square76x76logo src="images/icon76.png"/>
+			<square114x114logo src="images/icon114.png"/>
+			<square120x120logo src="images/icon120.png">
+			<square144x144logo src="images/icon144.png">
+			<square152x152logo src="images/icon152.png">
+			<TileColor>#0074a2</TileColor>
+		</tile>
+	</msapplication>
+</browserconfig>
+

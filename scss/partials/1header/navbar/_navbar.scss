@@ -1,0 +1,206 @@
+/* Style for navbar ==============================
+===================================================*/
+
+.topBar {
+	@extend %bgColor2;
+	height: auto;
+	position: fixed;
+	z-index: 99999;
+	top: 0;
+	
+	.navbar-brand {
+		display: inline-block;
+		padding: 16px 16px 16px 0;
+		height: auto;
+		outline: none;
+		img {
+			display: block;
+			width: 105px;
+			height: 40px;
+		}
+	}
+	.navbar-header {
+		button {
+			.sr-only {
+
+			}
+			.icon-bar {
+
+			}
+		}
+	}
+	.collapse {
+
+	}
+	.navbar-collapse {
+		padding-top: 15px;
+		padding-left: 0;
+		padding-right: 0;
+	}
+	.navbar-right {
+		margin-right: 0;
+	}
+}
+
+.navbar-nav {
+	li {
+		a {
+			@extend %bgColorTransparent;
+			//@extend %textTransformUpper;
+			@extend %fontColor1;
+			@extend %fontOpenSans;
+			display: inline-block;
+			@include border-radius(5px);
+			//border: 1px solid transparent;
+			padding: 15px 15px;
+			outline: none;
+			min-width: 75px;
+			&:active {
+				@extend %fontStrong;
+				@extend %bgColorTransparent;
+			}
+			
+			&:hover, &:focus {
+				@extend %fontStrong;
+				@extend %bgColorTransparent;
+				//border: 1px solid $colorWhite;
+			}
+		}
+		&.selected {
+			a {
+				@extend %fontStrong;
+				@extend %bgColorTransparent;
+			}
+		}
+		.picButton {
+			@extend %bgColorTransparent;
+			@extend %textTransformUpper;
+			@extend %fontColor1;
+			@extend %fontOpenSans;
+			@extend %fontStrong;
+			display: inline-block;
+			@include border-radius(2px);
+			border: 1px solid $colorWhite;
+			padding: 5px 15px;
+                        margin-top: 5px;
+			outline: none;
+		}
+	}
+}
+
+
+.navbar-header {
+	margin-right: 0;
+	margin-left: 0;
+	.navbar-toggle {
+		@extend %bgColorTransparent;
+		@include border-radius(5px);
+		border: 1px solid $colorWhite;
+		padding: 10px;
+		margin-right: 15px;
+		margin-top: 16px;
+		.icon-bar + .icon-bar {
+    		margin-top: 3px;
+    	}
+		span {
+			width: 20px;
+			height: 2px;
+			background-color: #fff;
+		}
+		&:hover {
+			@extend %bgColor1;
+			span {
+				background-color: $colorTopBar;
+			}
+		}
+		
+	}
+}
+
+
+@media (max-width: 767px) {
+	.topBar {
+		position: static;
+		top: 0;
+		.navbar-brand {
+			padding: 10px 10px 10px 0;
+		}
+		.navbar-collapse {
+			padding-top: 0;
+			border: none;
+		}
+		.navbar-nav.navbar-right {
+			padding-top: 8px;
+			border-top: 1px solid rgba(255,255,255,0.1);
+
+			li {
+				vertical-align: top;
+				width: 33.33%;
+			}
+		}
+	}
+	.navbar-header {
+		.navbar-toggle {
+			margin-top: 13px;
+			margin-right: 15px;
+		}
+	}
+	.navbar-nav {
+		margin-right: 0;
+		margin-left: 0;
+		li {
+			display: inline-block;
+			text-align: center;
+			width: 25%;
+			text-align: center;
+			a {
+				display: block;
+				padding: 10px 15px;
+				text-align: center;
+			}
+			.picButton {
+				display: inline-block;
+				margin: 0 auto;
+			}
+		}
+	}
+	
+}
+
+@media (max-width: 479px) {
+	.navbar-nav {
+		li {
+			width: 100%;
+			display: block;
+			text-align: center;
+			a {
+				border-right: none;
+				border-left: none;
+				@include border-radius(0);
+				text-align: center;
+				&:hover, &:focus {
+					border-left: none;
+					border-right: none;
+				}
+				padding: 5px 15px;
+			}
+			.picButton {
+				display: inline-block;
+				margin: 0 auto;
+			}
+		}
+	}
+	.topBar {
+		.navbar-nav.navbar-right {
+			li {
+				width: 100%;
+			}
+		}
+	}
+}
+
+
+
+/* Responsive NavBar================================================
+===================================================================*/
+
